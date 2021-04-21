@@ -35,17 +35,17 @@ function love.keypressed(p)
     -- check keypresses for etc/opts
     if p == "r" then -- reset
         love.load()
-    elseif p == "s" and isPlaying == true then
+    elseif p == "s" and isPlaying == true then -- stop
         isPlaying = false
-    elseif p == "s" and isPlaying == false then
+    elseif p == "s" and isPlaying == false then -- play
         isPlaying = true
     elseif p == "left" and isPlaying == true and Fps > 1 then -- lower fps
         Fps = Fps - 1
     elseif p == "right" and isPlaying == true then -- up fps
         Fps = Fps + 1
-    elseif p == "left" and Frame > 0 then
+    elseif p == "left" and Frame > 0 then -- change frame decreasing
         Frame = Frame - 1
-    elseif p == "right" then
+    elseif p == "right" then -- change frame increasing 
         Frame = Frame + 1
     end
 end
