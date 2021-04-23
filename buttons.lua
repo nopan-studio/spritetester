@@ -91,7 +91,7 @@ function button.load()
             h = 32,
             pressed = function() 
                 isPlaying = false
-                simp.pop({button=true})
+                simp.pop({button=true,group=false})
                 button.load()
             end,
         })
@@ -137,7 +137,7 @@ function button.load()
             h = 32,
             pressed = function() 
                 isPlaying = true
-                simp.pop({button=true})
+                simp.pop({button=true,group=false})
                 button.load()
             end,
         })
